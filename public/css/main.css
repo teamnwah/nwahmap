@@ -1,0 +1,18 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+.main {
+    height: 100%;
+    width: 100%;
+}
+
+.head {
+    height: 20px;
+}
+
+.map {
+    height: calc(100% - 20px);
+    width: 100%;
+}
