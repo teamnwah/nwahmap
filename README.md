@@ -1,6 +1,8 @@
 # nwahmap
 You N'wah really need a map to get around?
 
+
+![](examples/screenshot.png)
 ---
 
 Nwahmap is a companion site for NwaHTTP the tes3mp plugin 
