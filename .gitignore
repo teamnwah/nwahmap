@@ -1,2 +1,6 @@
 /.idea/
 /public/tileset/mwmap/
+/public/blob/*
+!/public/blob/.gitkeep
+/node_modules
+

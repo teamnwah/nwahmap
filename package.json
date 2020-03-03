@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "@babel/core": "^7.8.6",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-transform-react-jsx": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.6",
+    "@babel/runtime": "^7.8.4",
+    "babel-loader": "^8.0.6",
+    "leaflet": "1.4.0",
+    "preact": "^10.3.3",
+    "three": "^0.114.0",
+    "webpack": "^4.41.6"
+  },
+  "devDependencies": {
+    "css-loader": "^2.1.1",
+    "file-loader": "^3.0.1",
+    "source-map-loader": "^0.2.4",
+    "style-loader": "^0.23.1",
+    "webpack-cli": "^3.3.11"
+  }
+}
