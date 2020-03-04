@@ -3,4 +3,5 @@
 /public/blob/*
 !/public/blob/.gitkeep
 /node_modules
+/public/js/dist
 

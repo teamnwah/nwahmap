@@ -5,7 +5,7 @@ export default class Bar extends Component {
         const ceilCurrent = Math.ceil(current);
         const perc = (ceilCurrent / base) * 100;
         return <div className={`bar ${type}`}>
-            <div className="inner-bar" style={{width: Math.max(perc) + '%'}}>
+            <div className="inner-bar" style={{width: Math.max(perc, 100) + '%'}}>
                 <span className="inner-text">{ceilCurrent}/{base} ({Math.ceil(perc)}%)</span>
             </div>
         </div>

@@ -84,16 +84,19 @@ export class HeadRenderer {
         this.clear();
         while (this.renderQueue.length > 0) {
             let [objects, res] = this.renderQueue.shift();
-            console.log(objects, res);
-            let shapePromises = objects.map(async x => {
-                let req = await fetch(`blob/shape/${x}.json`);
-                let json = await req.json();
-                let shapeColl = await ShapeCollection.forceLoad(json, 'blob/texture/');
-                this.add(shapeColl);
-            });
-            await Promise.all(shapePromises);
-            this.rotate(-5 * (Math.PI / 180), -30 * (Math.PI / 180), 0);
-            res(await this.draw());
+            try {
+                let shapePromises = objects.map(async x => {
+                    let req = await fetch(`blob/shape/${x}.json`);
+                    let json = await req.json();
+                    let shapeColl = await ShapeCollection.forceLoad(json, 'blob/texture/');
+                    this.add(shapeColl);
+                });
+                await Promise.all(shapePromises);
+                this.rotate(-5 * (Math.PI / 180), -30 * (Math.PI / 180), 0);
+                res(await this.draw());
+            } catch (e) {
+                console.log("Failed to render", objects);
+            }
             this.clear();
         }
 
